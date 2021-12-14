@@ -31,3 +31,18 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - 因为ref 和 computed 等功能都可以从vue 中全局引入 所以我们就可以把组件进行任意颗粒度的拆分和组合 这样就大大提高了代码的可维护性和复用性
 - 如果在scroped 内部想写全局样式 可以用:global 来标记
+
+- vuex有一个持久化存储的插件persistedstate可以直接存储在localstorage中
+
+- ajax让数据的获取不需要刷新页面 spa 应用让路由跳转也不需要刷新页面
+
+- vux 的实现
+- vue-router 实现
+
+```
+// 统计页面中一共有多少html标签
+new Set([...document.querySelectorAll('*')].map(n=>n.nodeName)).size
+// 统计页面出现次数最多的3中html标签
+Object.entries([...document.querySelectorAll('*')].map(node => node.node.nodeName)).recude((r, n) => { r[n] = r[n] ? r[n] + 1 : 1; return r }, {}).sort((a,b) => b[1] - a[1]).slice(0, 3)
+console.table()
+```

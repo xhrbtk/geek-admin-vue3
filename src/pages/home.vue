@@ -6,6 +6,7 @@
     <Rate :value="score"></Rate>
     <Animation />
     <Animation1 />
+    <Count />
 </template>
 
 <script setup>
@@ -16,6 +17,7 @@ import Rate1 from '../components/Rate1.vue'
 import Rate from '../components/Rate.vue'
 import Animation from '../components/Animation.vue'
 import Animation1 from '../components/Animation1.vue'
+import Count from '../components/Count.vue'
 let score = ref(3.5)
 function update(num){
     score.value = num

@@ -46,3 +46,13 @@ new Set([...document.querySelectorAll('*')].map(n=>n.nodeName)).size
 Object.entries([...document.querySelectorAll('*')].map(node => node.node.nodeName)).recude((r, n) => { r[n] = r[n] ? r[n] + 1 : 1; return r }, {}).sort((a,b) => b[1] - a[1]).slice(0, 3)
 console.table()
 ```
+
+- 手写的h函数 可以处理动态性更高的场景 但是如果是复杂的场景 h函数写起来就显得非常繁琐 需要自己吧所有的属性都转变成对象
+
+- 安装一个jsx 插件 @vitejs/plugin-vue-jsx -D 用于写jsx 并在vite.config.js 中配置
+
+- 如何选择 jsx 和 template  jsx是h函数的一个语法糖本质是js  jsx 可以支持更动态的需求 而template则因为语法限制原因 不能够像jsx那样可以支持更动态的需求 这是jsx 相比于template 的一个优势
+
+- 实现业务 优先使用 template 动态性要求较高的组件使用jsx实现
+
+- 安装element3  npm install element3 --save
